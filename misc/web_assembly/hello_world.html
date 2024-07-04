@@ -1,0 +1,9 @@
+<script src="./hello_world/a.out.js"></script>
+<script>
+  Module.onRuntimeInitialized = async _ => {
+    const test = {
+      helloWorld: Module.cwrap('helloWorld', 'string', []),
+    };
+    document.write(test.helloWorld());
+  };
+</script>

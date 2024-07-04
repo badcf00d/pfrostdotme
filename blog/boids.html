@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self'; style-src 'self' 'unsafe-inline'; ">
+	<title>Peter Frost</title>
+
+	<meta property="og:title" content="P. Frost">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="It's a trap">
+	<meta property="og:image" content="https://pfrost.me/images/rule30.png">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="shortcut icon" href="icons/favicon.ico">
+</head>
+
+<body>
+	<link rel="stylesheet" href="../css/styles.css">
+
+	<header>
+		<div class="style-jumbotron" title="HTML/CSS Bird Flocking Simulation using Boids Algorithm">|</div>
+	</header>
+
+	<div id="boidsDiv" class="80,follow-mouse,no-colour,hide-boundaries"
+		style="height: 40vh; margin: auto; overflow: hidden;"></div>
+
+	<main>
+		<p>
+			These simulations are being rendered using individual HTML elements with CSS translations, and they're very
+			easy to include in a web page, just include the script and create a boundary for the boids to work in.
+			They'll even follow your mouse if you move it around near them. Lets take a look at what's going on behind
+			the scenes to create this flocking behaviour:
+		</p>
+		<br>
+		<h3>
+			Bounding
+		</h3>
+		<p>
+			Each boid starts in a random place, with a random velocity. In this example with just one boid, it will just
+			carry on with the same velocity until it gets close to the edge of the region it's in. At this point it's
+			velocity will be nudged in the opposite direction in proportion to how close it is to the boundary, stopping
+			it from just flying off the screen at the first opportunity.
+		</p>
+		<div id="boidsDiv" class="1,ignore-mouse,no-colour,show-boundaries"
+			style="height: 15vh; margin: auto; overflow: hidden; padding: 0;"></div>
+		<br>
+		<h3>
+			Attraction
+		</h3>
+		<p>
+			Each boid is setup with a maximum visual range, and each boid can only see other boids within this visual
+			range. Put another way, if you imagine a circle drawn round each boid, it can only see other boids within
+			its circle. This part is by far the most computationaly intensive as for each boid, we much calculate the
+			distance to every other boid in order to know which other boids are within it's vision.
+		</p>
+		<div id="boidsDiv" class="3,ignore-mouse,debug-colour,hide-boundaries"
+			style="height: 15vh; margin: auto; overflow: hidden; padding: 0;"></div>
+		<p>
+			<b><em>Boring computer science interjection</em></b> Imagine a boid with 3 other boids around it. To
+			calculate whether any of those are within it's vision, we have 3 distance measurements to take. Then when we
+			do the same with each of those other boids, we also have to do 3 measurements. So the number of calculations
+			is 3x3, aka 3². This means the simulation has a big-O notation of <big-O>N²</big-O>, so the time it takes to
+			simulate increases with the square of the number of boids.
+		</p>
+		<p>
+			With two boids present you can see that generally one ends up following behind the other. This is mainly
+			because the simulation is setup so that a boid can't see behind itself. So from the perspective of the boid
+			infront, it doesn't have anything to follow, and will just continue straight while the others will follow
+			along behind.
+		</p>
+		<div id="boidsDiv" class="3,ignore-mouse,debug-colour,hide-boundaries"
+			style="height: 15vh; margin: auto; overflow: hidden; padding: 0;"></div>
+	</main>
+
+	<script src="../js/scripts.js" async></script>
+	<script src="../js/boids.js" async></script>
+</body>
+
+</html>

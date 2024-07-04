@@ -1,0 +1,18 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Fira Sans", sans-serif;
+	text-rendering: optimizeLegibility;
+	background: linear-gradient(hsl(220, 8%, 23%), hsl(220, 8%, 23%));
+	z-index: -1;
+	min-height: 100vh;
+  text-decoration-color: #DDDDDD;
+	color: #DDDDDD;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

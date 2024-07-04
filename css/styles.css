@@ -1,0 +1,126 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: hsl(200, 50%, 5%);
+	min-height: 100vh;
+	scrollbar-width: thin;
+	color: #EEEEEE;
+	text-align: justify;
+}
+
+a {
+	color: #EEEEEE;
+	text-decoration: none;
+}
+
+a:hover {
+	color: hsl(200, 100%, 50%);
+}
+
+p {
+	font-weight: 300;
+	font-size: 14pt;
+	line-height: 1.4;
+}
+
+h1 {
+	font-size: 28pt;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 20pt;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 16pt;
+	font-weight: 500;
+}
+
+footer {
+	text-align: right;
+	font-size: 14pt;
+	font-weight: 300;
+	padding: 20px;
+	padding-bottom: 15px;
+	background: linear-gradient(180deg, hsl(200, 100%, 10%), hsl(200, 50%, 5%));
+	color: #BBBBBB;
+	border-top: medium solid #00A0FF;
+}
+
+header {
+	height: 30vh;
+	min-height: 350px;
+	background-image: linear-gradient(45deg, hsl(200, 100%, 15%), hsl(200, 100%, 5%));
+	display: flex;
+	flex-flow: column;
+	border-bottom: 2px solid #00A0FF;
+}
+
+main {
+	margin: 0px 5vw 0px 5vw;
+}
+
+main>a {
+	border-bottom: thin solid hsl(200, 50%, 20%);
+}
+
+.style-social {
+	display: flex;
+	width: 100%;
+	margin: auto;
+}
+
+.style-social a {
+	width: 50px;
+	margin: auto;
+}
+
+.style-social a :hover {
+	opacity: 0.7;
+	transition: .3s;
+}
+
+
+.style-jumbotron {
+	text-align: center;
+	margin: auto;
+	font-family: monospace;
+	font-weight: 400;
+	font-size: 38pt;
+	color: hsl(200, 100%, 50%);
+	cursor: url("../images/think.png"), auto;
+}
+
+.style-jumbotron:after {
+	content: '';
+	width: 5px;
+	height: 36pt;
+	background: hsl(200, 100%, 50%);
+	opacity: 0;
+	display: inline-block;
+	animation: blink 0.5s 3.0s infinite alternate;
+	animation-timing-function: step-start;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.boids {
+	height: 2vw;
+	width: 2vw;
+	max-width: 20px;
+	max-height: 20px;
+	position: absolute;
+	overflow: hidden;
+	will-change: transform;
+}

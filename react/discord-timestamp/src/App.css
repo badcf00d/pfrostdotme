@@ -1,0 +1,177 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  top: 0;
+	text-align: left;
+	font-weight: 600;
+	font-size: 14pt;
+  color: #CCCCCC;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: solid 2px hsl(220, 70%, 70%);
+  background-image: linear-gradient(45deg,hsl(210, 80%, 10%) 0%,hsl(210, 80%, 3%) 99.48%);
+}
+
+.App-main {
+	text-align: left;
+  padding: 0px 0px 0px 0px;
+  width: 50%;
+	margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.selector-div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0px 20px 0px;
+}
+
+.selector-div > div {
+  background-color: hsl(210, 20%, 16%);
+  border-radius: 7px;
+  margin: 10px 20px 10px 0px;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+	.App-main {
+		width: 95%;
+	}
+}
+
+
+
+
+.timestamp-table {
+  background-color: hsl(210, 20%, 12%);
+  border-radius: 7px;
+  padding: 10px 15px 15px 15px;
+  margin: 10px 20px 10px 0px;
+  display: inline-block;
+}
+
+table {
+  text-align: left;
+  border-spacing: 10px;
+  border-collapse: collapse;
+  color: hsl(40, 9%, 90%);
+}
+
+th {
+  font-size: 12pt;
+  padding: 3px 10px 3px 10px;
+  font-weight: 300;
+}
+
+tr {
+  border: solid #444444;
+  border-width: 1px 0;
+}
+
+tr:first-child {
+  border-top: none;
+  border-bottom: solid 3px #AAAAAA;
+}
+
+td {
+  padding: 14px 2vw 14px 5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.discord {
+  display: inline-block;
+  background-color: hsl(220, 8%, 23%);
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+  font-weight: 600;
+  color: #EEEEEE;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: 'Whitney';
+}
+
+.discord > div {
+  font-weight: 500;
+  display: inline-block;
+  background-color:rgb(79, 84, 92);
+  border-radius: 3px;
+  padding: 1px 4px 3px 2px;
+  margin-left: 7px;
+  line-height: 1rem;
+  color: #EEEEEE;
+}
+
+.tooltip > code {
+  display: inline-block;
+  background-color:#17273f;
+  border-radius: 2px 4px 4px 2px;
+  border-left: solid 4px hsl(227, 58%, 65%);
+  padding: 5px 10px 5px 10px;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  transition: background-color 0.1s ease-out;
+}
+
+.tooltip > code:hover {
+  background-color:hsl(217, 49%, 33%);
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  bottom: 130%;
+  left: 70px;
+  margin-left: -60px;
+  background-color: #EEEEEE;
+  color: hsl(203, 100%, 10%);
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #EEEEEE transparent transparent transparent;
+}
+
+@font-face {
+  font-family: 'Whitney';
+  src: local('Whitney'), url(./fonts/whitney-light.otf) format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Whitney';
+  src: local('Whitney'), url(./fonts/whitney-book.otf) format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Whitney';
+  src: local('Whitney'), url(./fonts/whitney-medium.otf) format('opentype');
+  font-weight: 600;
+}
