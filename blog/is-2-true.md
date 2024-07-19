@@ -183,4 +183,6 @@ and standards documents that I haven't covered here.
 
 
 
-But in summary, is 2 true? 2 is not *equal* to true, but often behaves like true in boolean contexts.
+But in summary, is 2 true? 
+
+### 2 is not *equal* to true, but often behaves like true in boolean contexts.

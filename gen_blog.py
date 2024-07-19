@@ -9,7 +9,8 @@ for path in pathlist:
     with open("blog/skeleton.html") as html_file:
         soup = BeautifulSoup(html_file, 'html.parser')
 
-    soup.find('div', {'class': 'style-jumbotron'})['title'] = path.name
+    nice_name = path.stem.replace('-', ' ').replace('_', ' ').title()
+    soup.find('div', {'class': 'style-jumbotron'})['title'] = nice_name
 
     blogpost = markdown2.markdown(path.read_text(),
                                   extras=['fenced-code-blocks'])
