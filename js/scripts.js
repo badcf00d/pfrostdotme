@@ -127,7 +127,7 @@ function initTypewritter()
 	{ 
 		if (frameCount < numSpins)
 		{
-			switch (jumbotronElement.innerText) {
+			switch (jumbotronElement.innerText.trim()) {
 				case '|':
 					jumbotronElement.innerText = '/';
 					break;

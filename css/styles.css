@@ -1,27 +1,46 @@
+* {
+	scrollbar-width: thin;
+	scrollbar-color: hsl(200, 100%, 15%) hsl(200, 100%, 5%);
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
 	background: hsl(200, 50%, 5%);
 	min-height: 100vh;
-	scrollbar-width: thin;
 	color: #EEEEEE;
 	text-align: justify;
 }
 
 a {
-	color: #EEEEEE;
-	text-decoration: none;
+	color: inherit;
 }
 
 a:hover {
 	color: hsl(200, 100%, 50%);
 }
 
+.codehilite > pre {
+	padding: 10px;
+	overflow: overlay;
+}
+
+.codehilite {
+	border-radius: 7px;
+	font-size: 12pt;
+}
+
+code {
+	padding: .1em;
+	border-radius: 5px;
+	background: #272822;
+}
+
 p {
 	font-weight: 300;
 	font-size: 14pt;
-	line-height: 1.4;
+	line-height: 1.5;
 }
 
 h1 {
@@ -60,7 +79,9 @@ header {
 }
 
 main {
-	margin: 0px 5vw 0px 5vw;
+	margin: auto;
+	max-width: 800px;
+	padding: 0px 20px 0px 20px;
 }
 
 main>a {
