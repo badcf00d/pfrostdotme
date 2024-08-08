@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Fira Sans', sans-serif;
-	background: hsl(205, 30%, 5%);
+	background: hsl(205, 10%, 10%);
 	min-height: 100vh;
 	color: #EEEEEE;
 	text-align: justify;
@@ -16,6 +16,7 @@ body {
 
 a {
 	color: inherit;
+	text-decoration: none;
 }
 
 a:hover {
@@ -47,9 +48,8 @@ p {
 h1 {
 	font-size: 28pt;
 	font-weight: 700;
-	/* margin-block-start: 1em;
-    margin-block-end: 0.4em; */
 	margin-block: inherit;
+	text-decoration: underline;
 }
 
 h2 {
@@ -93,12 +93,19 @@ nav p {
 }
 
 nav > div {
-	background-color: #333;
+	background-color: hsl(0, 0%, 20%);
 	border-radius: 10px;
 	padding: 20px 20px 1px 20px;
 	margin-block: 0px;
-	margin: 30px 0px;
+	margin: 60px 0px;
+	box-shadow: hsl(0, 0%, 7%) 0px 0px 10px 5px;
+	transition: 150ms;
+}
 
+nav > div:hover {
+	background-color: hsl(0, 0%, 22%);
+	margin: 65px 0px 65px 0px;
+	box-shadow: hsl(0, 0%, 7%) 0px 0px 10px 10px;
 }
 
 .style-social {
@@ -149,8 +156,4 @@ nav > div {
 	}
 }
 
-
-/* 
-	Fonts 
-*/
 

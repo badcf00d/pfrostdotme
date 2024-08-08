@@ -40,6 +40,8 @@ def generate_home_page():
         home_soup.find('nav').clear()
 
         for blog_page in Path("blog").rglob('*.html'):
+            if blog_page.stem == 'skeleton':
+                continue
             blog_soup = BeautifulSoup(blog_page.read_text(), 'html.parser')
 
             new_heading = home_soup.new_tag('h1')
@@ -53,7 +55,7 @@ def generate_home_page():
             description = home_soup.new_tag('p')
             description.string = blog_soup.main.get_text(" ", strip=True)[:250]
             description.string += '...'
-            new_link.insert_after(description)
+            new_link.append(description)
             
 
         html_file.seek(0)
