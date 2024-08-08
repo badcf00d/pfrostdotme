@@ -13,3 +13,4 @@ CSS files are generated with
 ```bash
 pygmentize -S monokai -f html -a .codehilite > css/pygments.css
 ```
+Then deleting the first line `pre { line-height: 125%; }` since this seems to just make all lines in code blocks clip with eachother.

@@ -1,13 +1,14 @@
 * {
 	scrollbar-width: thin;
-	scrollbar-color: hsl(200, 100%, 15%) hsl(200, 100%, 5%);
+	scrollbar-color: hsl(205, 100%, 15%) hsl(205, 100%, 5%);
+	text-rendering: optimizeLegibility;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
-	background: hsl(200, 50%, 5%);
+	font-family: 'Fira Sans', sans-serif;
+	background: hsl(205, 30%, 5%);
 	min-height: 100vh;
 	color: #EEEEEE;
 	text-align: justify;
@@ -18,7 +19,7 @@ a {
 }
 
 a:hover {
-	color: hsl(200, 100%, 50%);
+	color: hsl(205, 100%, 50%);
 }
 
 .codehilite > pre {
@@ -45,7 +46,10 @@ p {
 
 h1 {
 	font-size: 28pt;
-	font-weight: 500;
+	font-weight: 700;
+	/* margin-block-start: 1em;
+    margin-block-end: 0.4em; */
+	margin-block: inherit;
 }
 
 h2 {
@@ -64,7 +68,7 @@ footer {
 	font-weight: 300;
 	padding: 20px;
 	padding-bottom: 15px;
-	background: linear-gradient(180deg, hsl(200, 100%, 10%), hsl(200, 50%, 5%));
+	background: linear-gradient(180deg, hsl(205, 100%, 10%), hsl(205, 50%, 5%));
 	color: #BBBBBB;
 	border-top: medium solid #00A0FF;
 }
@@ -72,20 +76,29 @@ footer {
 header {
 	height: 30vh;
 	min-height: 350px;
-	background-image: linear-gradient(45deg, hsl(200, 100%, 15%), hsl(200, 100%, 5%));
+	background-image: linear-gradient(45deg, hsl(205, 100%, 15%), hsl(205, 100%, 5%));
 	display: flex;
 	flex-flow: column;
 	border-bottom: 2px solid #00A0FF;
 }
 
-main {
+main, nav {
 	margin: auto;
-	max-width: 800px;
+	max-width: 1000px;
 	padding: 0px 20px 0px 20px;
 }
 
-main>a {
-	border-bottom: thin solid hsl(200, 50%, 20%);
+nav p {
+	color: #bbb;
+}
+
+nav > div {
+	background-color: #333;
+	border-radius: 10px;
+	padding: 20px 20px 1px 20px;
+	margin-block: 0px;
+	margin: 30px 0px;
+
 }
 
 .style-social {
@@ -111,7 +124,7 @@ main>a {
 	font-family: monospace;
 	font-weight: 400;
 	font-size: 38pt;
-	color: hsl(200, 100%, 50%);
+	color: hsl(205, 100%, 50%);
 	cursor: url("../images/think.png"), auto;
 }
 
@@ -119,7 +132,7 @@ main>a {
 	content: '';
 	width: 5px;
 	height: 36pt;
-	background: hsl(200, 100%, 50%);
+	background: hsl(205, 100%, 50%);
 	opacity: 0;
 	display: inline-block;
 	animation: blink 0.5s 3.0s infinite alternate;
@@ -136,12 +149,8 @@ main>a {
 	}
 }
 
-.boids {
-	height: 2vw;
-	width: 2vw;
-	max-width: 20px;
-	max-height: 20px;
-	position: absolute;
-	overflow: hidden;
-	will-change: transform;
-}
+
+/* 
+	Fonts 
+*/
+

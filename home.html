@@ -1,55 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-	<meta http-equiv="Content-Security-Policy"
-		content="default-src 'none'; object-src 'none'; img-src 'self' data:; font-src 'self' data:; script-src https://pfrost.me/js/ file:; style-src 'self' 'unsafe-inline'; manifest-src 'self'">
-	<title>Peter Frost</title>
-
-	<meta property="og:title" content="P. Frost">
-	<meta property="og:type" content="website">
-	<meta property="og:description" content="It's a trap">
-	<meta property="og:image" content="https://pfrost.me/images/rule30.png">
-
-	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-	<link rel="shortcut icon" href="icons/favicon.ico">
-</head>
-
-<body>
-	<link rel="stylesheet" href="css/styles.css">
-
-	<header>
-		<div class="style-jumbotron">|</div>
-		<nav class="style-social">
-			<a href="https://github.com/badcf00d">
-				<img src="images/Github_Logo.svg" alt="Github Logo">
-			</a>
-
-			<a href="https://www.linkedin.com/in/frostp/">
-				<img src="images/LinkedIn_Logo_2013.svg" alt="Telegram Logo">
-			</a>
-		</nav>
-	</header>
-
-
-	<main>
-		<a href="./blog/boids.html">
-			<h1>Boids</h1>
-		</a>
-		<p>Some boidy bois</p>
-
-		<a href="./blog/is-2-true.html">
-			<h1>Is 2 True</h1>
-		</a>
-		<p>Is 2 true</p>
-	</main>
-
-	<footer>Designed and hosted by me</footer>
-
-	<script src="js/scripts.js"></script>
-</body>
-
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, height=device-height, initial-scale=1.0" name="viewport">
+        <meta content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com" http-equiv="Content-Security-Policy">
+        <title>
+            Peter Frost
+        </title>
+        <meta content="P. Frost" property="og:title">
+        <meta content="website" property="og:type">
+        <meta content="It's a trap" property="og:description">
+        <meta content="https://pfrost.me/images/rule30.png" property="og:image">
+        <link href="icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+        <link href="icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+        <link href="icons/favicon.ico" rel="shortcut icon">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;700&amp;display=block" rel="stylesheet">
+    </head>
+    <body>
+        <link href="css/styles.css" rel="stylesheet">
+        <header>
+            <div class="style-jumbotron">
+                |
+            </div>
+            <div class="style-social">
+                <a href="https://github.com/badcf00d">
+                    <img alt="Github Logo" src="images/Github_Logo.svg">
+                </a>
+                <a href="https://www.linkedin.com/in/frostp/">
+                    <img alt="Telegram Logo" src="images/LinkedIn_Logo_2013.svg">
+                </a>
+            </div>
+        </header>
+        <nav>
+            <div>
+                <a href="blog/boids.html">
+                    <h1>
+                        Boids
+                    </h1>
+                </a>
+                <p>
+                    These simulations are being rendered using individual HTML elements with CSS translations, and they're very
+			easy to include in a web page, just include the script and create a boundary for the boids to work in.
+			They'll even follow your mouse if...
+                </p>
+            </div>
+            <div>
+                <a href="blog/is-2-true.html">
+                    <h1>
+                        Is 2 True
+                    </h1>
+                </a>
+                <p>
+                    I caused a bug the other day by assuming the answer to this question was yes, surely 2 must be true, I mean it clearly isn't false is it? The offending C code was along the lines of this: uint8_t foo = someStuffThatReturnsaNumber (); if (( foo &amp; 0b00...
+                </p>
+            </div>
+            <div>
+                <a href="blog/cross-compile-VLC.html">
+                    <h1>
+                        Cross Compile Vlc
+                    </h1>
+                </a>
+                <p>
+                    Prerequisites Install docker on your platform https://docs.docker.com/engine/install/ . Windows Binaries: git clone -b 3.0.x https://code.videolan.org/videolan/vlc.git
+docker run --user root --rm --volume ~/vlc:/vlc -it registry.videolan.org/vlc-debi...
+                </p>
+            </div>
+            <div>
+                <a href="blog/cross-compile-AV1.html">
+                    <h1>
+                        Cross Compile Av1
+                    </h1>
+                </a>
+                <p>
+                    Prerequisites Download the tools to compile aom, mingw-w64 is what gives us a 64-bit gcc toolchain that will compile Windows executables on Unix platforms: sudo apt update
+sudo apt install git build-essential make mingw-w64 nasm yasm cmake Download t...
+                </p>
+            </div>
+            <div>
+                <a href="blog/skeleton.html">
+                    <h1>
+                        Skeleton
+                    </h1>
+                </a>
+                <p>
+                    ...
+                </p>
+            </div>
+        </nav>
+        <footer>
+            Designed and hosted by me
+        </footer>
+        <script src="js/scripts.js">
+        </script>
+    </body>
 </html>
