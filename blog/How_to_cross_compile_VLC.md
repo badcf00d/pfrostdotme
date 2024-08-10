@@ -1,6 +1,7 @@
+6 March 2022
+
 # Compiling VLC from source for Windows and Linux
 
-## Prerequisites
 By far the easiest way of compiling VLC is using the provided Docker containers, so install docker on your platform [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 
 ## For Windows:
