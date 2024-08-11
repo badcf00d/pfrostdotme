@@ -14,3 +14,22 @@ CSS files are generated with
 pygmentize -S monokai -f html -a .codehilite > css/pygments.css
 ```
 Then deleting the first line `pre { line-height: 125%; }` since this seems to just make all lines in code blocks clip with eachother.
+
+## React
+
+To build the discord timestamps app:
+```bash
+sudo apt install npm
+npm install
+npm run build
+```
+
+Then add this to the nginx config:
+```
+    location /dstamp {
+        index index.html;
+        rewrite ^/dstamp(.*)$ /react/discord-timestamp/build/$1 break;
+        try_files $uri $uri/ =404;
+        limit_req zone=lr_zone burst=5 nodelay;
+    }
+```
